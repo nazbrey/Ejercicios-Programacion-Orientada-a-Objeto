@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="ejemploPolimorfismo.csproj" />
+    <None Include="ejemplopolimorfismo.sln" />
+  </ItemGroup>
+
 </Project>
