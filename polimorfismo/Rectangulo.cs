@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace ejemploPolimorfismo
 {
-    internal class Rectangulo:Forma
+    internal class Rectangulo : Forma
     {
         public Rectangulo(string Lado1, String Lado2) : base(Lado1, Lado2)
         {
         }
+
         public void CalcularArea()
         {
 

@@ -14,9 +14,9 @@ namespace Interfaz_Ejemplo.Celulares
         private IAccesorio Accesorio1;
         private Componente Bateria;
         private Componente Procesador;
-        public Celular(IAccesorio Accesorio, IAccesorio accesorio1)
+        public Celular(IAccesorio accesorio, IAccesorio accesorio1)
         {
-            Accesorio = Accesorio;
+            Accesorio = accesorio;
 
             this.Bateria = new Bateria();
             this.Procesador = new Procesador();

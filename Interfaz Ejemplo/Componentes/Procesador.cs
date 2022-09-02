@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interfaz_Ejemplo.Componentes
 {
-    internal class Procesador: Componente
+    internal class Procesador : Componente
     {
         public override void voltaje()
         {
