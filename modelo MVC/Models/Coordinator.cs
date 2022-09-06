@@ -10,13 +10,16 @@ namespace modelo_MVC.Models
     {
         public string Name { get; private set; }
         public string Description { get; private set; }
+
+        public Enterprise Enterprise { get; private set; }  
         public List<CoordinatorWork> coordinatorWork { get; private set; }
 
-        public Coordinator(int id, string name) : base(id)
-        { 
+        public Coordinator(int id, string name, Enterprise enterprise) : base(id)
+        {
             this.Name = name;
             this.Description = name;
             coordinatorWork = new();
+            Enterprise = enterprise;    
         }
         public void AddWork(string workId) 
         {

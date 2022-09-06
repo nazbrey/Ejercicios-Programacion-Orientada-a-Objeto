@@ -10,6 +10,7 @@ namespace modelo_MVC.Models
     {
         public  string WorkeId { set; private get;}
         public string CoordinatorId { set; private get; }
+
         public CoordinatorWork(int id,  string workeId, string coordinatorId) : base(id)     
         {
             WorkeId = workeId;
