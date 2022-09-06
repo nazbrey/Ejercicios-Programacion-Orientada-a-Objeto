@@ -1,6 +1,6 @@
 ﻿namespace WebModeloVistacontrolador.Models
 {
-    public class Ceo
+    public class Ceo 
     {
     }
 }

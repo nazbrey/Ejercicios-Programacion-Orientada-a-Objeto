@@ -1,6 +1,12 @@
 ﻿namespace WebModeloVistacontrolador.Models
 {
-    public class Entity
+    public abstract class Entity
     {
+        public int Id { get; set; }
+
+        public Entity(int id)
+        {
+            this.Id = id;
+        }
     }
 }
