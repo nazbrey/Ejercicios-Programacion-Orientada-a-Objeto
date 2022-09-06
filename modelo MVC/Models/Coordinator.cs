@@ -14,13 +14,23 @@ namespace modelo_MVC.Models
         public Enterprise Enterprise { get; private set; }  
         public List<CoordinatorWork> coordinatorWork { get; private set; }
 
-        public Coordinator(int id, string name, Enterprise enterprise) : base(id)
+        private Coordinator(int id, string name, Enterprise enterprise) : base(id)
         {
+            if (id == null)
+            {
+                Console.WriteLine("El id  esta vacio no puede continuar");
+            }
             this.Name = name;
             this.Description = name;
             coordinatorWork = new();
-            Enterprise = enterprise;    
+            Enterprise = enterprise;
+
         }
+
+        public static Coordinator Build(int id, string description, Enterprise enterprise) {
+            return new Coordinator(id, description, enterprise);    
+        }
+
         public void AddWork(string workId) 
         {
             this.coordinatorWork.Add(

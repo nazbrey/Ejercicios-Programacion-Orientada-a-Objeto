@@ -16,18 +16,25 @@ namespace modelo_MVC.Models
         
         public List<Worker> Workers { get; private set; }
 
-        public Enterprise(int id, string Name, string direccion,Coordinator coordinator, Worker worker) : base(id) 
-	{
+
+        private Enterprise(int id, string Name, string direccion) : base(id) 
+	    {
             Coordinators = new List<Coordinator> (); 
             Workers = new List<Worker> ();
             this.Name = Name;
             this.Direccion = direccion;
 
-	}
+    	}
+        public static Enterprise Build(int id, string Name, string direccion)
+        {
+            return new Enterprise(id, Name, direccion);
+        }
+
         public void AddCoordinators(Coordinator coordinator) 
         {
             this.Coordinators.Add(coordinator);
         }
+
         public void AddWorkes(Worker worker) 
         {
             this.Workers.Add(worker);
