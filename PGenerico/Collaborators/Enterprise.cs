@@ -16,6 +16,7 @@ namespace PGenerico.Collaborators
 
             Asociados = new List<T>();
         }
+
         public void Asociar(T obj) {
 
             obj.Id = "1234";
