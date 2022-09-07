@@ -12,6 +12,7 @@ namespace modelo_MVC.Models
         public string Description { get; private set; }
 
         public Enterprise Enterprise { get; private set; }  
+
         public List<CoordinatorWork> coordinatorWork { get; private set; }
 
         private Coordinator(int id, string name, Enterprise enterprise) : base(id)

@@ -12,7 +12,7 @@ namespace modelo_MVC.Views.CreateWork
     {
         public void Render(Worker obj)
         {
-            Console.WriteLine("El id del trabaador es "+ obj.Id);
+            Console.WriteLine("El id del trabajador es "+ obj.Id+"la cedula del estudiante es "+obj.Cedula+ "La empresa tiene nombre "+obj.Enterprise.Name);
         }
     }
 }

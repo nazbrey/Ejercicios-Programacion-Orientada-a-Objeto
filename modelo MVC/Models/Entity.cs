@@ -8,7 +8,7 @@ namespace modelo_MVC.Models
 {
     internal abstract class Entity
     {
-        public int Id { get; set; }
+        public int Id { get; protected set; }
        
         public Entity (int id)
 	{
