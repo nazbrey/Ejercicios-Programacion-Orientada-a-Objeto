@@ -1,12 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using WebModeloVistacontrolador.Data;
+using WebModeloVistacontrolador.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddDbContext<WebModeloVistaControladorDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("")));
+//Inteccio de Dependencias
+builder.Services.AddScoped<IRepository, Repository>();
+builder.Services.AddScoped<EnterpriseService>();
+builder.Services.AddScoped<WorkerService>();
+builder.Services.AddScoped<CoordinatorService>();
+// conexion a  la base datos
+builder.Services.AddDbContext<WebModeloVistaControladorDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("WebConnectionString")));
 
 var app = builder.Build();
 
