@@ -23,7 +23,7 @@ namespace WebModeloVistacontrolador.Models
             
         }
         // Contructor Que se puede llamar 
-        public Worker Build(int id, string name, DateTime fechaNacimiento, Enterprise enterprise, Guid enterpriseId,int documento)
+        public static Worker Build(int id, string name, DateTime fechaNacimiento, Guid enterpriseId,int documento)
         {
             return new Worker(id, name, fechaNacimiento, enterpriseId, documento);
 

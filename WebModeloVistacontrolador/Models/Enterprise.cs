@@ -19,7 +19,7 @@
             Adress = adress;
             Nit = nit;
         }
-        public Enterprise Build( int id, string name, string adress, int nit)
+        public static Enterprise Build( int id, string name, string adress, int nit)
         {
             return new Enterprise(id, name, adress, nit);   
         }

@@ -18,7 +18,7 @@
             EnterpriseId = enterpriseId;    
         }
 
-        public Coordinator  Build(int id, string name, int document, string area, Guid enterpriseId) 
+        public static Coordinator  Build(int id, string name, int document, string area, Guid enterpriseId) 
         {
             return new Coordinator(id, name, document, area, enterpriseId);
         }
