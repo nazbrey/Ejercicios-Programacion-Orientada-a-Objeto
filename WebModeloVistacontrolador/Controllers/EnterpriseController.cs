@@ -23,42 +23,55 @@ namespace WebModeloVistacontrolador.Controllers
         { 
             var enterprise = Enterprise.Build(id, name, adress, nit);
             await this.enterpriseService.Crear(enterprise);
-            return View();
+            return RedirectToAction(nameof(Index));
 
         }
         [HttpGet]
-        public  IActionResult Crearte()
+        public  IActionResult Create()
         {
             return View();  
         }
-        //Modificar
-        [HttpPost]
-        public IActionResult Upate(Enterprise enterprise)
-        {
-            enterpriseService.Update(enterprise);
-            return View();
-        }
+
+
         //Vista despues de crear
         [HttpGet]
-        public IActionResult Upate()
+        public IActionResult Update(int id, string name, string adress, int nit)
         {
-            return View();
+            var empresa =  Enterprise.Build(id,name,adress,nit);
+               
+            return View(empresa);
         }
+        //Modificar
+        [HttpPost]
+        public IActionResult Udpate(int id, string name, string adress, int nit)
+        {
+            var empresa = Enterprise.Build(id, name, adress, nit);
+            this.enterpriseService.Update(empresa);
+            return RedirectToAction(nameof(Index)); ;
+        }
+
 
         //Elimanar
-        [HttpPost]
-        public IActionResult Delete(Enterprise enterprise)
-        {
-            enterpriseService.Delete(enterprise);
-            return View();
 
-        }
-        // Vista despues de Eliminar
         [HttpGet]
-        public IActionResult Delete()
+        public IActionResult Delete(int id, string name, string adress, int nit)
         {
-            return View();
+            var empresa = Enterprise.Build(id, name, adress, nit);
+
+            return View(empresa);
         }
+
+        [HttpPost]
+        public IActionResult Delete1(int id, string name, string adress, int nit)
+        {
+            var empresa = Enterprise.Build(id, name, adress, nit);
+            this.enterpriseService.Delete1(empresa);
+            return RedirectToAction(nameof(Index)); ;
+        }
+
+
+        // Vista despues de Eliminar
+
 
     }
 }

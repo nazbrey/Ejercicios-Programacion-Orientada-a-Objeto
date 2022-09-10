@@ -29,21 +29,27 @@ namespace WebModeloVistacontrolador.Services
         {
             return await this.repository.GetAll<Enterprise>();
         }
-        // Modificar 
-        public void Update(Enterprise enterprise)
-        {
-            if (enterprise is null)
-                throw new Exception("Trabajador  Esta vacio");
 
-            repository.Update(enterprise);
+     
+      
+
+        // Modificar 
+        public void  Update(Enterprise empresa)
+        {
+            if (empresa is null)
+                throw new Exception("Empresa Vacia");
+
+            this.repository.Update(empresa);
+            this.repository.Commit();
         }
         //Eliminar
-        public void Delete(Enterprise enterprise)
+        public void Delete1(Enterprise empresa)
         {
-            if (enterprise is null)
+            if (empresa is null)
                 throw new Exception("Trabajador  Esta vacio");
 
-            repository.Delete(enterprise);
+            this.repository.Delete(empresa);
+            this.repository.Commit();
         }
     }
 }

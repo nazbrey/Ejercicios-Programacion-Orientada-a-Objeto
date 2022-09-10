@@ -8,17 +8,25 @@
             public string Adress { get; private set; }
             public int Nit { get; private set; }
             public List<Worker> Workers { get; private set; }    
-            public List<Coordinator> coordinators { get; private set; } 
-            //public Ceo ceo { get; private set; }    Preguntas para el profe como implemento esta entidad si es sola una 
+            public List<Coordinator> coordinators { get; private set; }
+        //public Ceo ceo { get; private set; }    Preguntas para el profe como implemento esta entidad si es sola una 
 
+        public Enterprise()
+        {
+        }
 
         //Constructor privado
-        private Enterprise(int id, string name, string adress, int nit) : base(id)
+
+        private  Enterprise(int id,
+                           string name,
+                           string adress,
+                           int nit) : base(id)
         {
             Name = name;
             Adress = adress;
             Nit = nit;
         }
+
         public static Enterprise Build( int id, string name, string adress, int nit)
         {
             return new Enterprise(id, name, adress, nit);   

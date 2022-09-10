@@ -38,9 +38,17 @@ namespace WebModeloVistacontrolador.Data
             await context.Set<T>().AddAsync(obj);
         }
         // Funcion de Actualizar
-        public void Update<T>(T obj) where T : Entity
+        public  void Update<T>(T obj) where T : Entity
         {
-            context.Set<T>().Update(obj);
+           context.Set<T>().Update(obj);
         }
+
+     
+
+    
+
+
+        // funcion buscar 
+
     }
 }
